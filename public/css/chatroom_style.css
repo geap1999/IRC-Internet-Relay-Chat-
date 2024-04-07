@@ -1,0 +1,221 @@
+html, body{
+    width:99.9%;
+    height:99.9%;    
+    background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+#croix{
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+#pop_up {
+    display: none;
+    position: absolute; 
+    justify-content: center;
+    margin-left: 90%;
+    margin-top: 3%;
+    width: 30%; 
+    height: 30%;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    border-radius: 25px;
+}
+
+.pop_up_main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.pop_up_main > img { 
+    width: 15px;   
+    height: 15px;
+}
+
+.form-example {
+    margin-bottom: 6%;
+}
+
+.user_room_gestion {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.create_new_room {
+    height: 10%;
+    width: 92.4%;
+    /* background-color: moccasin; */
+    border-style: solid none none solid;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    border-color:  rgba(135, 134, 134, 0.398);
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    transition: all 0.2s ease-out;
+}
+
+.create_new_room p {
+    margin-right: 6%;
+}
+.create_new_room:hover {
+	background: #c4dce0; 
+    cursor: pointer;
+}
+
+.plus_create_new_room {
+    width: 35px;
+    height: 35px;
+    margin-left: 7%;
+}
+
+.list_room {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    border-style: solid none solid solid;
+    align-items: center ;
+    border-color:  rgba(135, 134, 134, 0.398);
+
+}
+
+.discussion_title {
+    width: 100%;
+    height: 7%;
+    padding-left: 14%;
+    margin: 0% 0% 5% 0%;
+}
+
+.chatroom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 83%;
+    height: 6%;
+    /* background-color: beige; */
+    border-radius: 13px;
+    padding-left: 4%;
+    margin-bottom: 5%;
+    transition: all 0.2s ease-out;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+
+.chatroom img {
+    width: 20px;
+    padding-right: 5%;
+}
+
+.chatroom:hover {
+	background: #c4dce0; 
+}
+.chat_main {
+    display: flex;
+    flex-direction: column;
+    /* background-color: pink; */
+    width: 100%;
+    height: 100%;
+}
+
+.room_tittle_main{
+    width: 100%;
+    height: 10.8%;
+    /* background-color: aqua; */
+    border-style: solid solid none solid;
+    border-color:  rgba(135, 134, 134, 0.398);
+
+}
+
+.room_tittle_main h2 {
+    padding-left: 1%;
+    margin-bottom: 0%;
+}
+
+.title_room_and_icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.room_participants {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: 30%;
+    color: rgba(87, 84, 84, 1);
+    font-size: small;
+    /* background-color: yellow; */
+    margin-left: 0.5%;
+}
+
+.room_participants > p {
+    padding-left: 1%;
+    margin: 0%;
+}
+
+.list_message_main {
+    width: 100%;
+    height: 82%;
+    /* background-color: blueviolet; */
+    border-style: solid;
+    border-color:  rgba(135, 134, 134, 0.398);
+}
+
+.send_message_main {
+    width: 100%;
+    height: 7.3%;
+    /* background-color: orange; */
+    border-style: none solid solid solid;
+    display: flex;
+    flex-direction: row;
+    border-color:  rgba(135, 134, 134, 0.398);
+}
+
+.champ_input {
+    display: flex;
+    width: 100%;
+    height: 98%;
+    /* background-color: navajowhite; */
+    color: black;
+    border-style: none;
+        background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
+    text-indent: 10px;
+    font-size: 15px;
+    color: rgba(87, 84, 84, 1);
+}
+
+.champ_input:focus {
+    outline-width: 0;
+}
+
+.button_send {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    padding-right: 1%;
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/chatroom_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0b9ce5977.js" crossorigin="anonymous"></script>
+    
+
+    <title>Document</title>
+</head>
+<body>  
+
+  <script src="/js/chatroom.js"></script>
+
+    <div class="main">
+
+    <div class="user_room_gestion">
+        <div class="create_new_room" onclick="myFunction()">
+            <p>Créer une nouvelle room</p>
+            <span style="font-size: 1.7em; color: black;">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+        </div>
+        <div class="list_room"  id="test">
+            <div id="pop_up">
+                <div class="pop_up_main">
+                    <img src="/img/close_FILL0_wght400_GRAD0_opsz24.png" alt="" id="croix" onclick="myFunction()">
+                    <form action="/createChannel" method="post" class="form-example">
+                        <div class="form-example">
+                            <h3>Création d'une nouvelle room</h3>
+                          <label for="name">Nom de la room </label>
+                          <input type="text" name="name" id="name" required />
+                          <select id="choose_status" name="choose_status">
+                            <option value="status" disabled selected>Status</option>
+                            <option value="public" name="public" id="public">public</option>
+                            <option value="private" name="private" id="private">private</option>
+                          </select>
+                        </div>
+                        <div class="form-example">
+                          <label for="email">Qui souhaitez vous inviter ? </label>
+                          <input type="email" name="email" id="email" required />
+                        </div>
+                        <div class="form-example">
+                          <button type="submit">Submit</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+            <div class="discussion_title">
+                <h2>Discussions</h2>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="chat_main"> 
+        <div class="room_tittle_main">
+            <div class="title_room_and_icon">
+                <h2>General Chat</h2> <form action="/logout" method="post"><button type="submit"><span style = "font-size: 1.7em; color: black;"><i class="fa-solid fa-right-from-bracket "></i></span></button></form>
+            </div>
+            <div class="room_participants" id="room_participants">
+
+            </div>
+        </div>
+
+        <div class="list_message_main">
+
+        </div>
+        <div class="send_message_main">
+            <form id="form-simple" class="champ_input">
+                  <input id="msg" class = "champ_input" type="text" placeholder="Ecrivez votre message ici." required />
+                  <button type="submit" id="myimage" src="/img/discuter.png" class="button_send">envoyer</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    const socket = io();
+
+    const form_simple = document.getElementById('form-simple');
+
+    form_simple.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        socket.emit("chat message", $("#msg").val());
+        $("#msg").val("");
+    })
+
+    socket.on("chat message", function (msg) {
+        $(".list_message_main").append($("<p>").text(msg));
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat IRC</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/register" method="post">
+            <h1>Inscription</h1>
+            <div class="input-control">
+                <label for="username">Pseudo</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Mot de passe</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div  class="link-redirect">
+              <span>J'ai déjà <a href="/">un compte !</a></span>
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+</body>
+</html>
