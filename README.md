@@ -7,9 +7,3 @@ Ce programme permet aux utilisateurs de se connecter à un serveur et d'utiliser
 Nous espérons que vous l'apprécierez !
 
 - Les gitteurs du quartier
-
-## --- Modèle Conceptuel des Données ---
-![alt text](./public/img/MCD-My-IRC.png)
-
-## --- Modèle Logique des Données ---
-![alt text](./public/img/MLD-My-IRC.png)
